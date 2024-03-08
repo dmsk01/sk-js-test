@@ -1,6 +1,6 @@
-import { getCardsData } from "./getData.js";
+import { getCardsData } from "./get-data.js";
 import { applyFilter } from "./utils.js";
-import { createCardList } from "./createLayout.js";
+import { createCardList } from "./create-layout.js";
 
 const list = document.querySelector("[data-project]");
 const filtersList = document.querySelectorAll("[data-filter=link]");
