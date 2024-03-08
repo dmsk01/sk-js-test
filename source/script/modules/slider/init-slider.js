@@ -1,8 +1,10 @@
 import Swiper from "swiper";
 import { Navigation } from "swiper/modules";
 
-const swiperInit = () =>
-  new Swiper(".products__swiper", {
+const swiperInit = () => {
+  const sliderLayout = document.querySelector(".products__swiper");
+  if (!sliderLayout) return;
+  return new Swiper(sliderLayout, {
     speed: 400,
     spaceBetween: 10,
     loop: true,
@@ -29,6 +31,7 @@ const swiperInit = () =>
       },
     },
   });
+};
 
 const mobileWidthMediaQuery = window.matchMedia("(max-width: 767px)");
 
